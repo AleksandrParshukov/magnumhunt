@@ -1,0 +1,195 @@
+.footer {
+  &__content {
+    padding-block: 40px 30px;
+    border-top: 1px solid $separator-gray;
+  }
+
+  &__top {
+    font-size: 12px;
+    line-height: 1.66667;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-size: 20px;
+      line-height: 1;
+      text-transform: none;
+    }
+
+    > div:last-child {
+      width: 217px;
+    }
+  }
+
+  &__logo {
+    width: 202px;
+    height: 40px;
+  }
+
+  &__bottom {
+    --first-gap: 20px;
+    --second-gap: 50px;
+
+    font-size: 16px;
+    color: $primary-black;
+    display: grid;
+    grid-template-columns:
+      calc(216px + var(--first-gap))
+      calc(180px + var(--second-gap))
+      67px 1fr 216px;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas:
+      'address documents menu pattern phones'
+      'copyright documents menu pattern messendgers';
+    gap: 20px 0;
+  }
+
+  &__address {
+    grid-area: address;
+  }
+
+  &__copyright {
+    margin-top: auto;
+    grid-area: copyright;
+  }
+
+  &__documents {
+    grid-area: documents;
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__pattern {
+    height: 160px;
+    margin-inline: 40px;
+    border-radius: 0 0 1000px 0;
+    grid-area: pattern;
+  }
+
+  &__phones {
+    grid-area: phones;
+  }
+
+  &__messendgers {
+    grid-area: messendgers;
+  }
+
+  &__caption {
+    font-size: 16px;
+    color: $text-gray;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 1.375;
+    color: $primary-black;
+  }
+}
+
+@media (max-width: $md) {
+  .footer {
+    &__content {
+      padding-block: 45px;
+    }
+
+    &__top {
+      justify-content: start;
+      gap: 300px;
+    }
+
+    &__logo {
+      width: 202px;
+      height: 40px;
+    }
+
+    &__bottom {
+      --first-gap: 20px;
+      --second-gap: 40px;
+
+      font-size: 12px;
+      grid-template-columns:
+        calc(167px + var(--first-gap))
+        calc(167px + var(--second-gap))
+        calc(67px + var(--second-gap))
+        1fr;
+      grid-template-areas:
+        'address documents menu phones'
+        'copyright documents menu messendgers';
+    }
+
+    &__caption {
+      font-size: 12px;
+    }
+
+    &__link {
+      font-size: 12px;
+      line-height: 1.66667;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .footer {
+    &__content {
+      padding-block: 45px;
+    }
+
+    &__top {
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 32px;
+
+      > div:first-child {
+        min-width: 250px;
+      }
+
+      a {
+        font-size: 16px;
+      }
+    }
+
+    &__logo {
+      width: 130px;
+      height: 24px;
+    }
+
+    &__bottom {
+      font-size: 12px;
+      grid-template-columns: repeat(2, 136px);
+      grid-template-rows: repeat(3, min-content);
+      grid-template-areas:
+        'messendgers phones'
+        'documents menu'
+        'address copyright';
+      gap: 24px 16px;
+    }
+
+    &__copyright {
+      margin-top: 0;
+    }
+
+    &__caption {
+      margin-bottom: 12px;
+    }
+
+    &__list {
+      gap: 12px;
+    }
+
+    &__link {
+      line-height: 1.33333;
+    }
+  }
+}

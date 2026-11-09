@@ -1,0 +1,86 @@
+@@include('./_header.html')
+
+<div class="wrapper">
+  <ol class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="/">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <p>Контакты</p>
+    </li>
+  </ol>
+</div>
+
+<section class="section-top section-top--inner">
+  <div class="wrapper">
+    <div>
+      <h1 class="h1">Контакты</h1>
+      <div class="section-top__pattern pattern"></div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts contacts--city">
+  <div class="wrapper">
+    <div class="idx-block">
+      <div>
+        <h2 class="idx-block__title">Москва</h2>
+        <svg width="10" height="61" viewBox="0 0 10 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.6" y="0.843897" width="8.8" height="58.8" stroke="#037BC2" stroke-width="1.2" />
+        </svg>
+      </div>
+      <div class="contacts__info">
+
+        <p class="contacts__caption">Секретарь</p>
+        <a class="contacts__mail" href="mailto:mh@magnumhunt.ru">mh@magnumhunt.ru</a>
+
+        <a class="contacts__phone" href="tel:+74959212110">+7 495 921-21-10</a>
+
+        <p class="contacts__address">
+          109012, Москва, ул. Ильинка,<br>
+          д. 3/8, стр. 5 (БЦ «Ильинка»)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts contacts--onmap">
+  <div class="wrapper">
+    <div class="idx-block">
+      <div>
+        <h2 class="idx-block__title">На карте</h2>
+        <svg width="30" height="61" viewBox="0 0 30 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.6" y="1.08779" width="8.8" height="58.8" stroke="#037BC2" stroke-width="1.2" />
+          <rect x="20.6" y="1.08779" width="8.8" height="58.8" stroke="#037BC2" stroke-width="1.2" />
+        </svg>
+      </div>
+      <div class="contacts__info">
+        <ul class="contacts__list">
+          <li>
+            <p class="contacts__caption">Телефоны</p>
+            <a href="tel:+74959212110">+7 495 921-21-10</a>
+            <a href="tel:+79129212110">+7 912 921-21-10</a>
+          </li>
+          <li>
+            <p class="contacts__caption">Мессенджеры</p>
+            <a href="#">Telegram</a>
+            <a href="#">Whatsapp</a>
+          </li>
+        </ul>
+        <a class="btn contacts__btn" href="https://yandex.ru/maps/213/moscow/?ll=37.624436%2C55.754600&mode=whatshere&whatshere%5Bpoint%5D=37.624345%2C55.754579&whatshere%5Bzoom%5D=19.28&z=19">
+          На большую карту
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 10.244H17.5M17.5 10.244L10.4167 3.16064M17.5 10.244L10.4167 17.3273" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+          </svg>
+        </a>
+      </div>
+      <!--  <img class="contacts__map" src="./img/map.png" alt="Map"> -->
+      <div id="map" class="contacts__map"></div>
+    </div>
+  </div>
+</section>
+
+@@include('./_conact-form.html')
+
+@@include('./_footer.html')

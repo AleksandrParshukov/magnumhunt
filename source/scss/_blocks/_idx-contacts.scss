@@ -1,0 +1,31 @@
+.idx-contacts {
+  .idx-block {
+    grid-template-columns: var(--first-col-width) max-content 1fr;
+  }
+
+  &__info {
+    color: $primary-black;
+    margin-right: 20px;
+  }
+
+  &__city {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+}
+
+@media (max-width: $md) {
+  .idx-contacts {
+    .idx-block {
+      grid-template-columns: var(--first-col-width) 1fr;
+    }
+
+    &__info {
+      margin-right: 0;
+    }
+
+    &__city {
+      margin-bottom: 20px;
+    }
+  }
+}

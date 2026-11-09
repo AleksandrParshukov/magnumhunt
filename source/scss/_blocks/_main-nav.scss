@@ -1,0 +1,183 @@
+.main-nav {
+  --link-font-size: 12px;
+  --language-left-margin: 52px;
+
+  padding-block: 12px;
+  border-bottom: 1px solid $separator-gray;
+  display: flex;
+  align-items: center;
+  gap: 0 var(--language-left-margin);
+
+  &--index {
+    --link-font-size: 16px;
+    --language-left-margin: 90px;
+
+    padding-block: 0;
+    border-color: transparent;
+    margin-bottom: 80px;
+    margin-left: auto;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__languages {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    font-size: var(--link-font-size);
+    text-transform: uppercase;
+    color: $primary-black;
+
+    &.inactive {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .main-nav {
+    --language-left-margin: 50px;
+
+    &--index {
+      --link-font-size: 14px;
+      --language-left-margin: 22px;
+
+      margin-bottom: 63px;
+      flex-wrap: nowrap;
+    }
+
+    &__list,
+    &__languages {
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .main-nav {
+    --language-left-margin: 50px;
+
+    padding-block: 10px;
+    position: relative;
+    gap: 10px;
+
+    &--index {
+      --link-font-size: 12px;
+
+      margin-bottom: 16px;
+      margin-left: 0;
+      flex-wrap: nowrap;
+
+      &.open {
+        padding-inline: 20px;
+        margin-inline: -20px;
+        background-color: $background-gray;
+        border-color: $separator-gray;
+      }
+    }
+
+    &.open {
+      .main-nav__dropdown {
+        display: flex;
+      }
+    }
+
+    &__list {
+      display: flex;
+      gap: 16px;
+    }
+
+    &__menu-toggle {
+      margin-left: auto;
+    }
+
+    &__dropdown {
+      color: $primary-black;
+
+      padding: 24px 16px;
+      background-color: $background-gray;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+    }
+
+    &__menus {
+      --first-gap: 20px;
+      --second-gap: 50px;
+
+      font-size: 12px;
+      color: $primary-black;
+      display: grid;
+      grid-template-columns: 136px 120px;
+      grid-template-rows: repeat(4, min-content);
+      grid-template-areas:
+        'phones menu'
+        'messendgers  menu'
+        'contact  menu'
+        'documents documents';
+      gap: 24px 16px;
+    }
+
+    &__documents {
+      grid-area: documents;
+    }
+
+    &__menu {
+      grid-area: menu;
+    }
+
+    &__contact {
+      grid-area: contact;
+    }
+
+    &__phones {
+      grid-area: phones;
+    }
+
+    &__messendgers {
+      grid-area: messendgers;
+    }
+
+    &__caption {
+      font-size: 12px;
+      line-height: 1.33333;
+      color: $text-gray;
+      margin-bottom: 12px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__link {
+      font-size: 12px;
+      line-height: 1.375;
+      text-transform: none;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 1.33333;
+    }
+
+    &__bottom {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

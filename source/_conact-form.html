@@ -1,0 +1,56 @@
+<section class="contact-form">
+  <div class="wrapper">
+    <div class="idx-block">
+      <div>
+        <h2 class="idx-block__title">Пресс-центр</h2>
+        <svg width="30" height="61" viewBox="0 0 30 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.46289 0.84375L14.4033 45.3105H15.5967L20.5371 0.84375H29.292L19.4922 59.6445H10.5078L0.708008 0.84375H9.46289Z" stroke="#037BC2" stroke-width="1.2" />
+        </svg>
+        <div class="contact-form__pattern pattern from-sm"></div>
+      </div>
+      <div class="contact-form__content">
+        <p class="h2">
+          Заполните форму, чтобы мы могли связаться
+          с вами и предложить экспертное решение
+          для вашего запроса
+        </p>
+        <form class="contact-form__form js_contact_form" action="">
+          <input class="contact-form__input" type="text" id="name" name="name" placeholder="Фамилия Имя" required>
+          <input class="contact-form__input" type="text" id="company" name="company" placeholder="Компания" required>
+          <input class="contact-form__input" type="tel" id="phone" name="phone" placeholder="Телефон" required>
+          <input class="contact-form__input" type="email" id="email" name="email" placeholder="Электронная почта" required>
+          <div class="custom-select">
+            <div class="custom-select__selected" tabindex="0">
+              <span>Какая услуга вас интересует?</span>
+
+              <svg class="custom-select__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="square" />
+              </svg>
+            </div>
+            <div class="custom-select__options">
+              <div class="custom-select__option" data-value="option1" tabindex="0">Вариант 1</div>
+              <div class="custom-select__option" data-value="option2" tabindex="0">Вариант 2</div>
+              <div class="custom-select__option" data-value="option3" tabindex="0">Вариант 3</div>
+              <div class="custom-select__option" data-value="option4" tabindex="0">Вариант 4</div>
+              <div class="custom-select__option" data-value="option5" tabindex="0">Вариант 5</div>
+              <div class="custom-select__option" data-value="option6" tabindex="0">Вариант 6</div>
+              <div class="custom-select__option" data-value="option7" tabindex="0">Вариант 7</div>
+            </div>
+            <input type="hidden" id="service" name="service">
+          </div>
+          <textarea class="contact-form__input" name="comment" id="comment" rows="3" placeholder="Ваш запрос"></textarea>
+          <input type="checkbox" id="privacy_policy" name="privacy_policy" required>
+          <label for="privacy_policy"><span>Согласен <a href="./policy.html">с политикой конфиденциальности</a> компании</span></label>
+          <div class="contact-form__bottom">
+            <button type="submit" class="btn contact-form__submit">
+              Отправить заявку
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 10.244H17.5M17.5 10.244L10.4167 3.16064M17.5 10.244L10.4167 17.3273" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

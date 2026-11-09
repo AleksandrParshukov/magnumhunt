@@ -1,0 +1,11 @@
+.slider {
+  &__prev,
+  &__next {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 100vw;
+    display: grid;
+    place-content: center;
+  }
+}

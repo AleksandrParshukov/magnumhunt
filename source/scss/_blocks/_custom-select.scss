@@ -1,0 +1,60 @@
+.custom-select {
+  position: relative;
+
+  &__options {
+    max-height: 250px;
+    overflow: auto;
+    scrollbar-width: thin;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: $background-gray;
+    z-index: 2;
+  }
+
+  &.open {
+    .custom-select__options {
+      display: block;
+    }
+
+    .custom-select__chevron {
+      color: $primary-black;
+    }
+  }
+
+  &__selected,
+  &__option {
+    font-size: 16px;
+    color: $primary-black;
+    padding-block: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $separator-gray;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: $primary-blue;
+      outline: none;
+    }
+  }
+
+  &__selected {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: $sm) {
+  .custom-select {
+    &__selected,
+    &__option {
+      font-size: 14px;
+      padding-block: 10px;
+    }
+  }
+}

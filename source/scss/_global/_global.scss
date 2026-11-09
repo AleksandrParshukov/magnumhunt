@@ -1,0 +1,88 @@
+:root {
+  --first-col-width: 217px;
+  --last-col-width: 452px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GillSansC', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.25;
+  color: $text-gray;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  background-color: $background-gray;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a,
+input {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.125s ease;
+}
+
+a {
+  color: $primary-blue;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+a:hover {
+  color: $primary-black;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: $md) {
+  :root {
+    --first-col-width: 167px;
+    --last-col-width: 354px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: $sm) {
+  body {
+    font-size: 12px;
+  }
+}

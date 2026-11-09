@@ -1,0 +1,53 @@
+.idx-team {
+  .idx-block {
+    padding-block: 128px;
+
+    > div:first-child {
+      grid-row: span 1;
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    color: $primary-black;
+    margin-bottom: 45px;
+  }
+
+  &__list {
+    grid-column: span 2;
+  }
+
+  &__btn {
+    grid-column-start: 2;
+  }
+}
+
+@media (max-width: $md) {
+  .idx-team {
+    .idx-block {
+      padding-bottom: 68px;
+    }
+
+    &__title {
+      font-size: 44px;
+      margin-bottom: 33px;
+    }
+
+    .team__item:nth-child(n + 9) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .idx-team {
+    .idx-block {
+      padding-block: 40px;
+    }
+
+    &__title {
+      font-size: 22px;
+      margin-bottom: 23px;
+    }
+  }
+}

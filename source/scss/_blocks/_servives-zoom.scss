@@ -1,0 +1,328 @@
+.servives-zoom {
+  .h1 {
+    max-width: 690px;
+  }
+
+  &__pattern {
+    max-width: 690px;
+    height: 307px;
+    padding-top: 219px;
+    margin-top: -179px;
+  }
+
+  .mt {
+    margin-top: 70px;
+  }
+}
+
+.srv-expertise {
+  .idx-block {
+    padding-top: 80px;
+  }
+
+  &__list {
+    max-width: 1040px;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__item {
+    font-size: 16px;
+    color: $primary-blue;
+    padding: 10px 20px;
+    border: 1.2px solid $primary-blue;
+    border-radius: 30px;
+  }
+}
+
+.srv-advantages {
+  &__list {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid $separator-gray;
+  }
+
+  &__item {
+    font-size: 24px;
+    line-height: 1.16667;
+    color: $primary-black;
+    min-height: 296px;
+    padding: 40px;
+    border: 1px solid $separator-gray;
+    flex: 1 1 40%;
+
+    &--big {
+      flex: 1 1 60%;
+    }
+  }
+
+  &__caption {
+    margin-top: 40px;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: $text-gray;
+    margin-top: 20px;
+  }
+}
+
+.srv-route {
+  &__list {
+    color: $primary-black;
+    margin-top: 60px;
+  }
+
+  &__item {
+    padding-block: 60px;
+    border-top: 1px solid $separator-gray;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  &__step {
+    display: flex;
+    gap: 57px;
+    position: relative;
+  }
+
+  &__num {
+    font-size: 80px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    font-size: 32px;
+    line-height: 1.16667;
+    max-width: 385px;
+  }
+
+  &__pattern {
+    width: 453px;
+    height: 96px;
+    border-radius: 0 0 1000px 0;
+    position: absolute;
+    top: 39px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__steps {
+    width: 533px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-shrink: 0;
+
+    > li {
+      display: flex;
+      gap: 20px;
+
+      &::before {
+        content: '';
+        width: 40px;
+        height: 10px;
+        border: 1px solid $primary-blue;
+        margin-top: 6px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .servives-zoom {
+    .h1 {
+      max-width: 354px;
+    }
+
+    &__pattern {
+      width: 354px;
+      height: 231px;
+      padding-top: 151px;
+      margin-top: -111px;
+    }
+
+    .mt {
+      margin-top: 44px;
+    }
+  }
+
+  .srv-expertise {
+    &__list {
+      margin-top: 48px;
+    }
+  }
+
+  .srv-advantages {
+    &__list {
+      margin-top: 52px;
+      flex-direction: column;
+      border: none;
+    }
+
+    &__item {
+      border: 1px solid $separator-gray;
+      flex: auto;
+
+      &--big {
+        flex: auto;
+      }
+
+      + .srv-advantages__item {
+        border-top: none;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  .srv-route {
+    &__list {
+      margin-top: 72px;
+    }
+
+    &__item {
+      padding-block: 48px;
+      flex-direction: column;
+    }
+
+    &__step {
+      height: 134px;
+    }
+
+    &__name {
+      line-height: 1;
+      max-width: 316px;
+    }
+
+    &__pattern {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+    }
+
+    &__steps {
+      width: 100%;
+      max-width: 533px;
+      gap: 20px;
+
+      > li {
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .servives-zoom {
+    .h1 {
+      max-width: 288px;
+    }
+
+    &__pattern {
+      width: 288px;
+      height: 157px;
+      padding-top: 101px;
+      margin-top: -85px;
+    }
+
+    .mt {
+      margin-top: 0;
+    }
+  }
+
+  .srv-expertise {
+    .idx-block {
+      padding-top: 40px;
+    }
+
+    &__list {
+      margin-top: 32px;
+    }
+
+    &__item {
+      font-size: 14px;
+    }
+  }
+
+  .srv-advantages {
+    &__list {
+      margin-top: 32px;
+    }
+
+    &__item {
+      font-size: 18px;
+      line-height: 1.11111;
+      min-height: 204px;
+      padding: 24px;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &__caption {
+      margin-top: 24px;
+    }
+
+    &__text {
+      font-size: 12px;
+      margin-top: 6px;
+    }
+  }
+
+  .srv-route {
+    &__list {
+      margin-top: 32px;
+    }
+
+    &__item {
+      padding-block: 32px 40px;
+      gap: 24px;
+    }
+
+    &__step {
+      height: 66px;
+      gap: 24px;
+    }
+
+    &__num {
+      font-size: 36px;
+    }
+
+    &__name {
+      font-size: 18px;
+      line-height: 1.11111;
+      max-width: 226px;
+    }
+
+    &__pattern {
+      width: 288px;
+      height: 48px;
+    }
+
+    &__steps {
+      gap: 14px;
+      flex-shrink: 0;
+
+      > li {
+        gap: 16px;
+
+        &::before {
+          width: 24px;
+          height: 6px;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
